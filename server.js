@@ -14,7 +14,7 @@ const app = express();
 app.use(express.static(__dirname+'/selfserver/build/'))
 
 app.get('/*',function(req, res){
-  res.sendFile(path.join(__dirname, '/qureka/build/index.html'), function(err) {
+  res.sendFile(path.join(__dirname, '/selfserver/build/index.html'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
